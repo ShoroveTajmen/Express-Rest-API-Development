@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "2c5fcf8b-4c5b-4c84-a519-9122d7240059",
+		"name": "StudentListAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11347307"
+	},
+	"item": [
+		{
+			"name": "InsertStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"tajmen\",\r\n    \"Roll\": 123,\r\n    \"Class\": \"Eleven\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadStudent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/ReadStudent",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"ReadStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"rohan\",\r\n    \"Roll\": 9,\r\n    \"Class\": \"ten\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/UpdateStudent/6431ac2783e4b63cb8d42d1d",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"UpdateStudent",
+						"6431ac2783e4b63cb8d42d1d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteStudent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/DeleteStudent/6431ac2783e4b63cb8d42d1d",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"DeleteStudent",
+						"6431ac2783e4b63cb8d42d1d"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:5000/api/v1",
+			"type": "string"
+		}
+	]
+}
